@@ -1,0 +1,57 @@
+
+#Default Setting
+<Button>
+    font_size:32
+    background_normal:''
+    background_color:(0,0,1,1)
+# Default Setting
+<TextInput>
+
+    font_size:21
+    background_color:(150/255,150/255,150/255,1)
+# Default Setting
+<Label>
+    font_size:25
+    
+
+<MyLayout>
+    BoxLayout:
+        orientation:'vertical'
+        size: root.width, root.height
+
+        padding: 10
+        spacing: 10
+
+
+        Label:
+            text:'Name'
+            font_size:45
+            background_color:(18/255,31/255,32/255,1)
+            canvas.before:
+                Color:
+                    rgba:self.background_color
+                Rectangle:
+                    pos:self.pos
+                    size:self.size
+            #Text Properties
+            color: (1 , 1 , 0 , 1)
+            bold:True
+            italic:True 
+            outline_color:(0,0,0)
+            outline_width:10
+        TextInput:
+
+            multiline:False 
+
+        Label:
+            text:'Favorite Pizza'
+
+        TextInput:
+            
+            multiline:False 
+
+        Button:
+            text:'Submit'
+        Button:
+            text:'Clear'  
+            background_color:(1,0,0,1)  
